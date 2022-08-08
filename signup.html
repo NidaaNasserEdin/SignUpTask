@@ -1,0 +1,94 @@
+<html>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+input[type=text], input[type=password] , input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus , input[type=email]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+input[type=date], input[type=phone]  {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=date]:focus, input[type=phone]:focus  {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: #0d593d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  width: 50%;
+  opacity: 0.9;
+}
+    </style>
+    <body>
+        <h1>Sign Up Form</h1>
+        <fieldset>
+            <H3>Please Fill this form to created acount</H3>
+            <form action="https://formspree.io/f/" method="post">
+            <label for="text">Full Name:</label>
+            <input name="text" placeholder="Enter Full Name" type="text" required><br>
+            <label for="email">Email:</label>
+            <input name="email" placeholder="Enter Email" type="email" required><br>
+            <label for="psw">Password:</label>
+            <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="phone" placeholder="Enter Phone Number" name="phone" pattern="[0-9]{10}"required><br>
+            <label for="DOB">Birthday:</label>
+            <input type="date" placeholder="Enter Date of birth" name="birthday"><br>
+            <label for="country">Country:</label>
+            <select name = "country" id="country" type="country">
+                <option value="Algeria">Algeria</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Egypt">Egypt</option>
+                <option value="Iran">Iran</option>
+                <option value="Iraq">Iraq</option>
+                <option value="Jordan">Jordan</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Lebanon">Lebanon</option>
+                <option value="Libya">Libya</option>
+                <option value="Morocco">Morocco</option>
+                <option value="Oman">Oman</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Syria">Syria</option>
+                <option value="United Arab Emirates and Yemen">United Arab Emirates and Yemen</option>
+                <option value="Tunisia">Tunisia</option>
+                <option value="Palestine">Palestine</option>
+            </select><br><br>
+            <label for="Plan">Plan:</label>
+            <input type="radio" id="Free" name="plan" value="Free">
+            <label for="Free">Free</label>
+            <input type="radio" id="Pro" name="plan" value="Pro">
+            <label for="Free">Pro</label><br><br>
+            <input type="checkbox" placeholder="checkbox" name="checkbox">
+            <label for="checkbox">I agree to terms and conditions</label><br>
+            <button type="submit">Submit</button>
+          </form>
+        </fieldset>
+    </body>
+</html>
